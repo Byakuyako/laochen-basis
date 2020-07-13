@@ -1,0 +1,155 @@
+/**
+ CSS reset
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav {
+  width: 100%;
+  height: 44px;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav .logo {
+  height: 44px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../img/apple_logo.svg);
+}
+
+.nav a {
+  text-decoration: none;
+  color: #D6D6D6;
+  width: 102px;
+  text-align: center;
+  line-height: 44px;
+}
+
+.nav .search {
+  height: 44px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../img/search.svg);
+}
+
+.nav .buy {
+  height: 44px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../img/buy.svg);
+}
+
+.toggleBtn {
+  /* width: 48px; */
+  height: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* cursor: pointer; */
+}
+
+.toggleBtn .line {
+  height: 1px;
+  width: 18px;
+  background-color: #fff;
+  transition: all 0.1s;
+  /* 这里待检查 */
+  transform-origin: left center;
+  /* cursor: pointer; */
+}
+
+/* 这里为什么是在line上面用 */
+.nav>.toggleBtn .line:nth-child(1) {
+  position: absolute;
+  /* calc怎么使用 */
+  left: calc(50% - 9px);
+  top: 14px;
+}
+
+.nav>.toggleBtn .line:nth-child(2) {
+  position: absolute;
+  /* calc怎么使用 */
+  left: calc(50% - 9px);
+  top: 26px;
+}
+
+.navPage {
+  display: flex;
+  width: 100vw;
+  height: 0vh;
+  transition: all 0.1s;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #000;
+}
+
+/* .navMain {
+  width: 100%;
+} */
+
+/* 设定屏幕小于768像素时的样式 */
+@media only screen and (max-width: 768px) {
+  .toggleBtn {
+    display: flex;
+    z-index: 100;
+    position: relative;
+  }
+
+  .nav .logo {
+    z-index: 100px;
+    position: relative;
+  }
+
+  .toggleBtn .line {
+    display: block;
+  }
+
+  .nav {
+    justify-content: space-between;
+  }
+
+  .nav .text,
+  .nav .search {
+    display: none;
+  }
+
+  .nav>.toggleBtn .line {
+    display: block;
+  }
+
+  .nav a,
+  .nav label {
+    width: 50px;
+  }
+
+
+  .nav .toggleBtn {
+    order: 1;
+  }
+
+  .nav .logo {
+    order: 2;
+  }
+
+  .nav .buy {
+    order: 3;
+  }
+
+  #choose:checked~.toggleBtn .line:nth-child(1) {
+    transform: rotate(45deg);
+  }
+
+  #choose:checked~.toggleBtn .line:nth-child(2) {
+    transform: rotate(-45deg);
+  }
+}

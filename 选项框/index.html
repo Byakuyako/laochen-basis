@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>选项框</title>
+  <style>
+    .btn {
+      display: inline-block;
+      width: 200px;
+      height: 100px;
+      border-radius: 10px;
+      text-align: center;
+      line-height: 100px;
+      background: #F9E4C4;
+    }
+
+    .box {
+      width: 200px;
+      height: 200px;
+    }
+
+    .box {
+      border: 1px solid black;
+      margin: 5px;
+    }
+
+    #bgyellow:checked~.box {
+      background-color: yellow;
+    }
+
+    #bggreen:checked~.box {
+      background-color: green;
+    }
+
+    #bgred:checked~.box {
+      background-color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <label for="bgyellow" class="btn">选择为黄色</label>
+  <label for="bggreen" class="btn">选择为绿色</label>
+  <label for="bgred" class="btn">选择为红色</label>
+  <h2>选择你最喜欢的颜色?</h2>
+  黄色
+  <input type="radio" id="bgyellow" value="黄色" hidden>
+  绿色
+  <input type="radio" id="bggreen" value="绿色" hidden>
+  红色
+  <input type="radio" id="bgred" value="红色" hidden>
+
+  <div class="box"></div>
+  <div class="box"></div>
+</body>
+
+</html>
