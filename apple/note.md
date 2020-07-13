@@ -16,4 +16,4 @@ background-image: url(../img/apple_logo.svg); 为什么一定要..开头的相�
 
 letter-spacing 属性设置, 可以基于 em
 
-background-size: auto 120%; 这个属性可以深究
+background-size: auto 120%; 这个属性可以好好看一下
