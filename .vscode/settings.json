@@ -1,2 +1,10 @@
 {
+  "cSpell.ignoreWords": [
+    "ds",
+    "ds store",
+    "store"
+  ],
+  "files.exclude": {
+    "**/.vscode": true
+  }
 }
