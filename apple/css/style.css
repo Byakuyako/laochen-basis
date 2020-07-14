@@ -58,9 +58,9 @@
 
 .toggleBtn .line {
   height: 1px;
-  width: 18px;
+  width: 19px;
   background-color: #fff;
-  transition: all 0.1s;
+  transition: all 0.3s;
   /* 这里待检查 */
   transform-origin: left center;
   /* cursor: pointer; */
@@ -78,14 +78,14 @@
   position: absolute;
   /* calc怎么使用 */
   left: calc(50% - 9px);
-  top: 26px;
+  top: 27px;
 }
 
 .navPage {
   display: flex;
   width: 100vw;
   height: 0vh;
-  transition: all 0.1s;
+  transition: all 0.5s;
   overflow: hidden;
   position: fixed;
   left: 0;
@@ -206,4 +206,17 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+
+.navList a {
+  width: 100%;
+  height: 44px;
+  color: #fff;
+  text-align: left;
+  border-bottom: 1px solid #333;
+  line-height: 44px;
+}
+
+.navList a:last-child {
+  border-bottom: none
 }
