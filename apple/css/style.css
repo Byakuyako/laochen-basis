@@ -28,7 +28,7 @@
   color: #D6D6D6;
   width: 102px;
   text-align: center;
-  line-height: 44px;
+  /* line-height: 44px; */
 }
 
 .nav .search {
@@ -47,8 +47,8 @@
 
 .toggleBtn {
   /* width: 48px; */
-  height: 48px;
-  display: flex;
+  height: 44px;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -93,9 +93,9 @@
   background-color: #000;
 }
 
-/* .navMain {
+.navPage .navMain {
   width: 100%;
-} */
+}
 
 /* 设定屏幕小于768像素时的样式 */
 @media only screen and (max-width: 768px) {
@@ -110,9 +110,9 @@
     position: relative;
   }
 
-  .toggleBtn .line {
+  /* .toggleBtn .line {
     display: block;
-  }
+  } */
 
   .nav {
     justify-content: space-between;
@@ -152,4 +152,58 @@
   #choose:checked~.toggleBtn .line:nth-child(2) {
     transform: rotate(-45deg);
   }
+}
+
+/* 浮选框选中时, 导航页面显示 */
+#choose:checked~.navPage {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #000;
+  color: #fff;
+  flex-direction: column;
+  padding-top: 54px;
+}
+
+.searchInput {
+  margin: 0 28px 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 36px;
+  border-radius: 4px;
+  color: #ccc;
+  background-color: rgba(45, 45, 45, 0.98);
+}
+
+.searchInput .icon {
+  width: 32px;
+  height: 36px;
+  background-image: url(../img/search.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.searchInput input {
+  flex: 1;
+  margin: 0 10px;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+}
+
+hr {
+  border-color: #333;
+}
+
+.navList {
+  margin: 0 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
