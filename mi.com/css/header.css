@@ -36,3 +36,21 @@ body {
   background-repeat: no-repeat;
   background-size: 25px auto;
 }
+
+.user {
+  width: 50px;
+  height: 44px;
+  background-image: url(../img/user.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 25px auto;
+}
+
+.search {
+  flex: 1;
+  height: 33px;
+  border: 1px sold #e5e5e5;
+  display: flex;
+  background-color: #fff;
+  border-radius: 2px;
+}
