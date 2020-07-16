@@ -1,0 +1,130 @@
+/* 轮播图部分 */
+.swiper {
+  width: 375px;
+  height: 188px;
+  background-image: url(../img/swiper.jpg);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
+  margin-top: 74px;
+}
+
+/* 两排小模块 */
+.iconList {
+  width: 375px;
+  height: 160px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.iconItem {
+  width: 20%;
+  height: 80px;
+}
+
+.iconItem img {
+  width: 100%;
+}
+
+.banner {
+  width: 375px;
+  height: 265px;
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.banner .lbanner,
+.banner .rbanner {
+  width: 186px;
+  height: 265px;
+}
+
+.banner .lbanner {
+  background-image: url(../img/img1.jpg);
+  background-size: 100% 100%;
+}
+
+.banner .rbanner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.banner .rbanner .rtbanner {
+  width: 186px;
+  height: 131px;
+  background-image: url(../img/img2.jpg);
+  background-size: 100% 100%;
+}
+
+.banner .rbanner .rbbanner {
+  width: 186px;
+  height: 131px;
+  background-image: url(../img/img3.jpg);
+  background-size: 100% 100%;
+}
+
+/* 精选 */
+.jx {
+  margin-top: 8px;
+  width: 375px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding-bottom: 60px;
+}
+
+.jxad {
+  width: 375px;
+  height: 230px;
+  background-image: url(../img/jxtop.jpg);
+  background-size: 100% 100%;
+}
+
+.pdList {
+  width: 375px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pdList .pdItem {
+  width: 50%;
+  height: 253px;
+  padding: 3px 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pdList .pdItem img {
+  width: 100%;
+  height: auto;
+}
+
+.pdList .pdItem .title {
+  padding-top: 5px;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.pdList .pdItem .brief {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.pdList .pdItem .price {
+  font-size: 15px;
+  color: #ea625b;
+}
+
+.pdList .pdItem .buyBtn {
+  width: 105px;
+  height: 31px;
+  text-align: center;
+  line-height: 31px;
+  color: #fff;
+  background-color: #ea625b;
+  border-radius: 3px;
+  font-size: 13px;
+}
