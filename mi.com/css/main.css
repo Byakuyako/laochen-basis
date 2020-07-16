@@ -159,3 +159,51 @@
   color: #999;
   font-size: 12px;
 }
+
+.footer .fIcon:nth-child(1) .img {
+  background-image: url(../img/hone1.png);
+}
+
+.footer .fIcon:nth-child(2) .img {
+  background-image: url(../img/list1.png);
+}
+
+.footer .fIcon:nth-child(3) .img {
+  background-image: url(../img/buycar1.png);
+}
+
+.footer .fIcon:nth-child(4) .img {
+  background-image: url(../img/center1.png);
+}
+
+.footer .fIcon:nth-child(1):hover .img {
+  background-image: url(../img/hone2.png);
+}
+
+.footer .fIcon:nth-child(2):hover .img {
+  background-image: url(../img/list2.png);
+}
+
+.footer .fIcon:nth-child(3):hover .img {
+  background-image: url(../img/buycar2.png);
+}
+
+.footer .fIcon:nth-child(4):hover .img {
+  background-image: url(../img/center2.png);
+}
+
+.footer .fIcon:nth-child(1):hover span {
+  color: #ff6700;
+}
+
+.footer .fIcon:nth-child(2):hover span {
+  color: #ff6700;
+}
+
+.footer .fIcon:nth-child(3):hover span {
+  color: #ff6700;
+}
+
+.footer .fIcon:nth-child(4):hover span {
+  color: #ff6700;
+}
