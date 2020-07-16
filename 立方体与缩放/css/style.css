@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cube {
+  position: absolute;
+  left: calc(50%-100px);
+  top: calc(50%-100px);
+}
+
+.btn {
+  display: inline-block;
+  width: 100px;
+  height: 40px;
+  font-size: 20px;
+  color: #999;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 40px;
+}
+
+#front:checked~.cube {
+  transform: rotate3d(0, 0, 0, 0deg);
+}
+
+#back:checked~.cube {
+  transform: rotate3d(0, 1, 0, 180deg);
+}
