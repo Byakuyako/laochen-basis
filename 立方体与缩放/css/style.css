@@ -22,6 +22,7 @@
   line-height: 40px;
 }
 
+/* 前后选项框 */
 #front:checked~.cube {
   transform: rotate3d(0, 0, 0, 0deg);
 }
@@ -37,6 +38,69 @@
 }
 
 #back:checked~.choose [for="back"] {
+  background: #ccc;
+  color: #fff;
+  box-shadow: 0 0 30px #999999;
+}
+
+/* 左右选项框 */
+#left:checked~.cube {
+  transform: rotate3d(0, 1, 0, 90deg);
+}
+
+#right:checked~.cube {
+  transform: rotate3d(0, 1, 0, -90deg);
+}
+
+#left:checked~.choose [for="left"] {
+  background: #ccc;
+  color: #fff;
+  box-shadow: 0 0 30px #999999;
+}
+
+#right:checked~.choose [for="right"] {
+  background: #ccc;
+  color: #fff;
+  box-shadow: 0 0 30px #999999;
+}
+
+/* 上下选项框 */
+#top:checked~.cube {
+  transform: rotate3d(1, 0, 0, -90deg);
+}
+
+#bottom:checked~.cube {
+  transform: rotate3d(1, 0, 0, 90deg);
+}
+
+#top:checked~.choose [for="top"] {
+  background: #ccc;
+  color: #fff;
+  box-shadow: 0 0 30px #999999;
+}
+
+#bottom:checked~.choose [for="bottom"] {
+  background: #ccc;
+  color: #fff;
+  box-shadow: 0 0 30px #999999;
+}
+
+/* 放大缩小选框 */
+#bigger:checked~.cube {
+  transform: rotate3d(0, 0, 0, -90deg) translateZ(300px);
+}
+
+#smaller:checked~.cube {
+  transform: rotate3d(0, 0, 0, 90deg) translateZ(-300px);
+}
+
+#bigger:checked~.choose [for="bigger"] {
+  background: #ccc;
+  color: #fff;
+  box-shadow: 0 0 30px #999999;
+}
+
+#smaller:checked~.choose [for="smaller"] {
   background: #ccc;
   color: #fff;
   box-shadow: 0 0 30px #999999;
