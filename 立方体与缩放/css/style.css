@@ -29,3 +29,15 @@
 #back:checked~.cube {
   transform: rotate3d(0, 1, 0, 180deg);
 }
+
+#front:checked~.choose [for="front"] {
+  background: #ccc;
+  color: #fff;
+  box-shadow: 0 0 30px #999999;
+}
+
+#back:checked~.choose [for="back"] {
+  background: #ccc;
+  color: #fff;
+  box-shadow: 0 0 30px #999999;
+}
