@@ -5,11 +5,11 @@ function lcAlert(args) {
     <div class="alert">
       <div class="header">
         <span class="title">
-        {{args.title}}
+        ` + args.title +  `
         </span>
         <span class="close">x</span>
       </div>
-      <div class="main">{{args.content}}</div>
+      <div class="main">` + args.content +  `</div>
       <div class="btnList">
         <div class="btn confirm">确定</div>
         <div class="btn cancel">取消</div>
