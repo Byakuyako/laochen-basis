@@ -17,6 +17,9 @@
       lcAlert({
         title: "严重警告!",
         content: "是否需要跳转至百度",
+        confirmFn:function(){
+          location.href = 'http://www.baidu.com'
+        },
         cancelFn: function () {
           var h1 = document.createElement('h1')
           h1.innerHTML = "用户已取消跳转至百度"
