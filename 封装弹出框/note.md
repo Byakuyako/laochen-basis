@@ -16,5 +16,9 @@ $ 和 {{}} 的使用场景
 picture 标签, 是一个容器, 内部使用 source 和 img, 
 指定不同情况下加载的图像
 
+script[type=module] 加载一个ES6模块, 而不是加载传统脚本
+
+sandbox 属性控制 iframe 页面的权限
+
 
 
