@@ -20,5 +20,7 @@ script[type=module] 加载一个ES6模块, 而不是加载传统脚本
 
 sandbox 属性控制 iframe 页面的权限
 
+loading 属性控制 iframe 页面的懒加载
+
 
 
