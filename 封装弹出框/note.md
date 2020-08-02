@@ -24,3 +24,5 @@ loading 属性控制 iframe 页面的懒加载
 
 scope 只有 th 支持, 确定 th 是关于行还是列
 
+form 的 method 类型
+
