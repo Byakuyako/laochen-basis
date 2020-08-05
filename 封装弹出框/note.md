@@ -28,3 +28,5 @@ form 的 method 类型
 
 fieldset 标签, 块级容器, 包含一组相关控件的集合
 
+移动端固定div最好用绝对定位, 而不用 fixed, 因为 fixed 会出现抖动现象
+
