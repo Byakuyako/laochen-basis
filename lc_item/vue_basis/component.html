@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue组件</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>Hello {{msg}}</h1>
+    <!--  添加组件-->
+    <button-counter></button-counter>
+    <button-counter></button-counter>
+    <button-counter></button-counter>
+  </div>
+  <script>
+    //定义 component 组件
+    let buttonCounter = Vue.component('button-counter', {
+      //视图层模板
+      template: `<div>
+        <h1>{{num}}</h1>
+        <button @click='addNum'>数字加1</button>
+      </div>`,
+      data: function () {
+        return {
+          num: 0
+        }
+      },
+      methods: {
+        addNum: function () {
+          this.num ++
+        }
+      }
+    })
+
+    let app = new Vue({
+      el: "#app",
+      data: {
+        msg: "Jesse"
+      },
+      //注册组件, 先定义再注册
+      component: {
+        buttonCounter
+      }
+    })
+  </script>
+</body>
+</html>

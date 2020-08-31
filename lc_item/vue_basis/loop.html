@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue循环</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>Hello {{msg}}</h1>
+    <h2>明星列表</h2>
+    <ul>
+      <li v-for="(item, i) in stars">{{i+1}} - {{item}}</li>
+    </ul>
+    <h2>学生列表</h2>
+    <ul>
+      <li v-for="(item, i) in students">第 {{i}} 名, {{item.username}}, 性别: {{item.gender}} </li>
+    </ul>
+  </div>
+  <script>
+    let app = new Vue({
+      el: "#app",
+      data: {
+        msg: "Jesse",
+        stars: ['黄晓明', '范冰冰', '刘亦菲', '胡歌'],
+        students: [
+          {username: '小明', gender: "男"},
+          {username: '小红', gender: "女"},
+          {username: '小芳', gender: "女"},
+          {username: '小勇', gender: "男"}
+        ]
+      }
+    })
+  </script>
+</body>
+</html>

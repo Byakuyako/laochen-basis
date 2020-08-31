@@ -9,6 +9,10 @@
   <!--  视图层-->
   <div id="app">
     <h1>hello {{msg}}</h1>
+    <h2 v-if="userInfo === 'VIP'">欢迎VIP用户回来</h2>
+    <h2 v-else>充值会让你更强大</h2>
+    <button @click="toggle">切换招呼</button>
+    <button @click="overdue">VIP过期啦</button>
   </div>
 
   <!--  数据层-->
@@ -16,7 +20,16 @@
     let app = new Vue({
       el: "#app",
       data: {
-        msg: "Jesse"
+        msg: "Jesse",
+        userInfo: "VIP"
+      },
+      methods: {
+        toggle: function () {
+          this.msg = "laochen"
+        },
+        overdue: function () {
+          this.userInfo = "Normal"
+        }
       }
 
     })
