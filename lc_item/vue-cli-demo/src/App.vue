@@ -1,18 +1,26 @@
 <template>
   <div id="app">
-
+    <h1>{{msg}} 欢迎你</h1>
+    <children @changeParent="editUsername"></children>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Children from './components/Children'
 export default {
   name: 'App',
   data: function () {
     return {
-      msg: "laochen"
+      msg: "Jesse"
     }
+  },
+  methods: {
+    editUsername: function (e) {
+      this.msg = e
+    }
+  },
+  components: {
+    Children
   }
 }
 </script>
