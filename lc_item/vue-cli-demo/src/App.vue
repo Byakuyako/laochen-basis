@@ -1,8 +1,18 @@
 <template>
   <div id="app">
-    <h1>Hello Jesse</h1>
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <label>
+      用户名: <input type="text" placeholder="请输入用户名" v-model="username">
+    </label>
+    <h1>用户名: {{username}}</h1>
+
+    <label>复选框<input type="checkbox" v-model="check"></label>
+    <h1>check: {{check}}</h1>
+
+    <label>
+      <textarea cols="30" rows="2" v-model="article"></textarea>
+    </label>
+    <h1>article: {{article}}</h1>
+
   </div>
 </template>
 
@@ -11,8 +21,13 @@ import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  data: function () {
+    return {
+      msg: "hello word",
+      username: '',
+      check: false,
+      article: ''
+    }
   }
 }
 </script>
