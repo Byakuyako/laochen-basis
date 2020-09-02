@@ -1,26 +1,22 @@
 <template>
   <div id="app">
-    <h1>{{msg}} 欢迎你</h1>
-    <children @changeParent="editUsername"></children>
+    <layout>
+      <template v-slot:left>
+        <div>左边</div>
+      </template>
+      <template v-slot:right>
+        <div>右边</div>
+      </template>
+    </layout>
   </div>
 </template>
 
 <script>
-import Children from './components/Children'
-export default {
+  import Layout from './components/Layout'
+  export default {
   name: 'App',
-  data: function () {
-    return {
-      msg: "Jesse"
-    }
-  },
-  methods: {
-    editUsername: function (e) {
-      this.msg = e
-    }
-  },
   components: {
-    Children
+    Layout
   }
 }
 </script>

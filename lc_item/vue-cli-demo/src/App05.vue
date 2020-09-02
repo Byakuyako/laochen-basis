@@ -1,26 +1,19 @@
+
 <template>
   <div id="app">
-    <h1>{{msg}} 欢迎你</h1>
-    <children @changeParent="editUsername"></children>
+
   </div>
 </template>
 
 <script>
-import Children from './components/Children'
+  //组件插槽
+
 export default {
   name: 'App',
   data: function () {
     return {
       msg: "Jesse"
     }
-  },
-  methods: {
-    editUsername: function (e) {
-      this.msg = e
-    }
-  },
-  components: {
-    Children
   }
 }
 </script>
