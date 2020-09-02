@@ -16,6 +16,12 @@ Vue.use(VueRouter)
     component: () => import(/* webpackChunkName: "about" */ '../views/Laochen.vue')
   },
   {
+    //配置动态路由
+    path: '/article/:id',
+    name: 'Article',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Article.vue')
+  },
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting
