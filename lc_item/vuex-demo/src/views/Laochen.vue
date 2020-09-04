@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1 @click="setMallname('小陈商城')">{{mall.mallname}}</h1>
     <h1>姓名: {{username}}</h1>
     <h2>年龄: {{age}}</h2>
     <h2>虚岁: {{nominalAge}}</h2>
@@ -31,10 +32,10 @@
       //   this.$store.commit('addAge', 10)
       // }
       ...mapActions(['getJoke']),
-      ...mapMutations(['addAge', 'getList'])
+      ...mapMutations(['addAge', 'getList', 'setMallname'])
     },
     computed: {
-      ...mapState(['username', 'age', 'list']),
+      ...mapState(['username', 'age', 'list', 'mall']),
       ...mapGetters(['nominalAge'])
     }
   };
