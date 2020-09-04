@@ -2,10 +2,10 @@
   <div>
     <h1>姓名: {{username}}</h1>
     <h2>年龄: {{age}}</h2>
-    <h2>虚岁: {{$store.getters.nominalAge}}</h2>
-    <button @click="ageAdd">年龄加10</button>
+    <h2>虚岁: {{nominalAge}}</h2>
+    <button @click="addAge(20)">年龄加20</button>
     <ul>
-      <li v-for="(item, i) in $store.state.list" :key="i">
+      <li v-for="(item, i) in list" :key="i">
         <h3>{{item.name}}</h3>
         <p>{{item.text}}</p>
       </li>
@@ -14,24 +14,28 @@
 </template>
 
 <script lang="ts">
-  import {mapState} from 'vuex';
+  //导入辅助函数
+  import {mapActions, mapGetters, mapMutations, mapState} from 'vuex';
 
   export default {
     name: 'Laochen',
     mounted() {
       console.log(this)
       //dispatch() 用来触发 vuex 的 actions
-      this.$store.dispatch('getJoke')
+      this.getJoke()
     },
     methods: {
-      ageAdd: function () {
-        // this.$store.state.age ++
-        //commit() 用来触发 vuex 的 mutations
-        this.$store.commit('addAge', 10)
-      }
+      // ageAdd: function () {
+      //   // this.$store.state.age ++
+      //   //commit() 用来触发 vuex 的 mutations
+      //   this.$store.commit('addAge', 10)
+      // }
+      ...mapActions(['getJoke']),
+      ...mapMutations(['addAge', 'getList'])
     },
     computed: {
-      ...mapState(['username', 'age', 'list'])
+      ...mapState(['username', 'age', 'list']),
+      ...mapGetters(['nominalAge'])
     }
   };
 </script>
