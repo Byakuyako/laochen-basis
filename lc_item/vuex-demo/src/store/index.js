@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import mall from './mall'
+import forum from './forum'
 
 Vue.use(Vuex)
 
@@ -42,6 +43,7 @@ export default new Vuex.Store({
   },
   //vuex细分的模块管理
   modules: {
-    mall
+    mall,
+    forum
   }
 })
