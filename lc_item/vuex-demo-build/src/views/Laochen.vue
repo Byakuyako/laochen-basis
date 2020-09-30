@@ -30,7 +30,7 @@
     methods: {
       // ageAdd: function () {
       //   // this.$store.state.age ++
-      //   //commit() 用来触发 vuex 的 mutations
+      //   //commit() 用来触发 vuex 的 mutations, 第二个参数是传给触发函数的
       //   this.$store.commit('addAge', 10)
       // }
       ...mapActions(['getJoke']),
