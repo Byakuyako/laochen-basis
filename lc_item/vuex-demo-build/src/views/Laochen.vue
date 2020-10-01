@@ -29,7 +29,7 @@
     },
     methods: {
       // ageAdd: function () {
-      //   // this.$store.state.age ++
+      //   // this.$store.state.age ++ vuex状态管理
       //   //commit() 用来触发 vuex 的 mutations, 第二个参数是传给触发函数的
       //   this.$store.commit('addAge', 10)
       // }
